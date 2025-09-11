@@ -37,29 +37,11 @@
                     <div class="input-box">
                         <label for="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-                        <script language="javascript">
-                            function validaremail (field){
-                                usuario = field.value.substring(0, field.value.indexOf("@"));
-                                dominio = fiel.value.substring(field.value.indexOf("@")+ 1, field.value.legth);
-                                if ((usuario.legth >=1)&&
-                                    (dominio.legth >=3)&&
-                                    (usuario.serch("@")==-1)&&
-                                    (dominio.serch("@")==-1)&&
-                                    (dominio.serch(" ")==-1)&&
-                                    (dominio.serch(".")!=-1)&&
-                                    (usuario.serch(".")!=-1)&&
-                                    (dominio.indexOf(".")< dominio.legth - 1)){
-                                        document.getElementById("msgemail").innerHTML ="<font color ='red'>E-mail inválido>/font>";
-                                            alert("Email invalido");
-                                    }
-                            }
-
-                        </script>
                     </div>
                     <!--input box 4-->
                     <div class="input-box">
                         <label for="number">Telefone</label>
-                        <input id="number" type="tel" name="number" placeholder="(XX) XXXX-XXXX" required>
+                        <input id="number" type="tel" name="number" placeholder="(XX) XXXXX-XXXX" required>
                     </div>
                     <!--Input Box 5-->
                     <div class="input-box">
@@ -107,6 +89,6 @@
         $(document).ready(function(){
             $('#number').mask('(00) 00000-0000');
         });
-    </script>    
+    </script>  
 </body>
 </html>
