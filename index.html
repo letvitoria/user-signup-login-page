@@ -18,14 +18,12 @@
         .toggle-btns button {
             padding: 8px 20px;
             border: none;
-            background: #5c63ff;
-            color: #fff;
+           
+            color: #233557;
             border-radius: 4px;
             cursor: pointer;
         }
-        .toggle-btns button.active {
-            background: #2323a7;
-        }
+
     </style>
 </head>
 
@@ -35,8 +33,15 @@
             <img src="assets/img/sistemas_e_tecnologia.png" alt="">
         </div>
         <div class="form">
+            <!--Botão de opções /CADASTRO-LOGIN/-->
+            <div class="toggle-btns">
+                <button id="btn-cadastro" class="active" type="button">Cadastro</button>
+                <button id="btn-login" type="button">Login</button>
+
+            </div>
+
             <!--Formulário de cadastro-->
-            <form action="#">
+            <form action="#" id="form-cadastro">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -64,6 +69,7 @@
                     <div class="input-box">
                         <label for="number">Celular</label>
                         <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+    
                     </div>
 
                     <div class="input-box">
@@ -74,7 +80,7 @@
 
                     <div class="input-box">
                         <label for="confirmPassword">Confirme sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirme sua senha" required>
                     </div>
 
                 </div>
@@ -127,11 +133,41 @@
                         <label for="login-password">Senha</label>
                         <input id="password" name="password" type="password" placeholder="Digite a sua senha" required>
                     </div>
-
+                    <div class="continue-button">
+                        <button type="submit">Entrar</button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        // Alternar entre cadastro e login
+        const btnCadastro = document.getElementById('btn-cadastro');
+        const btnLogin = document.getElementById('btn-login');
+        const formCadastro = document.getElementById('form-cadastro');
+        const formLogin = document.getElementById('form-login');
+
+        btnCadastro.addEventListener('click', () =>{
+            btnCadastro.classList.add('active');
+            formLogin.classList.remove('active');
+            formCadastro.classList.remove('hidden');
+            formLogin.classList.add('hidden');
+        });
+
+        btnLogin.addEventListener('click', () =>{
+            btnLogin.classList.add('active');
+            btnCadastro.classList.remove('active');
+            formLogin.classList.remove('hidden');
+            formCadastro.classList.add('hidden');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#number').mask('(00) 00000-0000');
+        });
+    </script>   
 </body>
 
 </html>
