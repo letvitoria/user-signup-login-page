@@ -1,0 +1,2 @@
+#233557 - Cor dos botões
+#E0E1DD - Cor para texto caso o background seja escuro
