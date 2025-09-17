@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Formulário</title>
     <style>
-        /* Exemplo de estilo simples para esconder/mostrar formulários */
+        /* Esconder/mostrar formulários */
         .hidden { display: none; }
         .toggle-btns {
             display: flex;
@@ -39,6 +39,7 @@
                 <button id="btn-login" type="button">Login</button>
 
             </div>
+          
 
             <!--Formulário de cadastro-->
             <form action="#" id="form-cadastro">
@@ -46,9 +47,7 @@
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
-                    <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
-                    </div>
+
                 </div>
 
                 <div class="input-group">
@@ -120,11 +119,11 @@
             <!--Formulário de Login-->
             <form id="form-login" class="hidden">
                 <div class="form-header">
-                    <div>
+                    <div class="title">
                         <h1>Login</h1>
                     </div>
                 </div>
-                <div class="input-group">
+                <div class="input-login">
                     <div class="input-box">
                         <label for="login-email">Email</label>
                         <input type="email" name="login-email" type="email" placeholder="Digite seu email" required>
@@ -167,7 +166,7 @@
         $(document).ready(function(){
             $('#number').mask('(00) 00000-0000');
         });
-    </script>   
+    </script>
 </body>
 
 </html>
